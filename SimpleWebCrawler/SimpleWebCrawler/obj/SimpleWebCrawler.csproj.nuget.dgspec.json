@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Lenovo\\source\\repos\\SimpleWebCrawler\\SimpleWebCrawler\\SimpleWebCrawler.csproj": {}
+    "C:\\Users\\Lenovo\\source\\gitHub\\SimpleWebCrawler\\SimpleWebCrawler\\SimpleWebCrawler\\SimpleWebCrawler.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Lenovo\\source\\repos\\SimpleWebCrawler\\SimpleWebCrawler\\SimpleWebCrawler.csproj": {
+    "C:\\Users\\Lenovo\\source\\gitHub\\SimpleWebCrawler\\SimpleWebCrawler\\SimpleWebCrawler\\SimpleWebCrawler.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Lenovo\\source\\repos\\SimpleWebCrawler\\SimpleWebCrawler\\SimpleWebCrawler.csproj",
+        "projectUniqueName": "C:\\Users\\Lenovo\\source\\gitHub\\SimpleWebCrawler\\SimpleWebCrawler\\SimpleWebCrawler\\SimpleWebCrawler.csproj",
         "projectName": "SimpleWebCrawler",
-        "projectPath": "C:\\Users\\Lenovo\\source\\repos\\SimpleWebCrawler\\SimpleWebCrawler\\SimpleWebCrawler.csproj",
+        "projectPath": "C:\\Users\\Lenovo\\source\\gitHub\\SimpleWebCrawler\\SimpleWebCrawler\\SimpleWebCrawler\\SimpleWebCrawler.csproj",
         "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Lenovo\\source\\repos\\SimpleWebCrawler\\SimpleWebCrawler\\obj\\",
+        "outputPath": "C:\\Users\\Lenovo\\source\\gitHub\\SimpleWebCrawler\\SimpleWebCrawler\\SimpleWebCrawler\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

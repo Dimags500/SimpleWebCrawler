@@ -19,13 +19,7 @@ namespace SimpleWebCrawler
         {
             InitializeComponent();
 
-            //string webSite1 = textBox_WbSite1.Text;
-            //string webSite2 = textBox_WbSite2.Text;
-            //string webSite3 = textBox_WbSite3.Text;
-            //string webSite4 = textBox_WbSite4.Text;
-            //string webSite5 = textBox_WbSite5.Text;
-
-            //string [] webArray = new string[]{ webSite1, webSite2, webSite3, webSite4, webSite5 };
+          
 
 
 
@@ -62,9 +56,11 @@ namespace SimpleWebCrawler
 
         private void Display(string item , TimeSpan ts )
         {
+            // display
+            item += "-------------------";
             string elapsedTime = String.Format("{0:00}:{1:00}:{2:00}.{3:00}",
                                          ts.Hours, ts.Minutes, ts.Seconds, ts.Milliseconds / 10);
-            text_output.AppendText("\n" + elapsedTime + " - " + item.Substring(0, 35));
+            text_output.AppendText("\n" + elapsedTime + " - " + item.Substring(0, 40));
 
         }
 
@@ -89,12 +85,20 @@ namespace SimpleWebCrawler
 
         private void button_submit_Click(object sender, EventArgs e)
         {
-             string webSite1 = textBox_WbSite1.Text;
-             string webSite2 = textBox_WbSite2.Text;
+            // string webSite1 = textBox_WbSite1.Text;
+            // string webSite2 = textBox_WbSite2.Text;
 
-            string[] Test_Arr = new string[] { webSite1, webSite2 };
+            //string[] webArray = new string[] { webSite1, webSite2 };
 
-            SyncDownload(Test_Arr);
+            string webSite1 = textBox_WbSite1.Text;
+            string webSite2 = textBox_WbSite2.Text;
+            string webSite3 = textBox_WbSite3.Text;
+            string webSite4 = textBox_WbSite4.Text;
+            string webSite5 = textBox_WbSite5.Text;
+
+            string[] webArray = new string[] { webSite1, webSite2, webSite3, webSite4, webSite5 };
+
+            SyncDownload(webArray);
 
             
 
