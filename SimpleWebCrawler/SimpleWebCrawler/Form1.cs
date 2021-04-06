@@ -13,16 +13,13 @@ using System.Diagnostics;
 
 namespace SimpleWebCrawler
 {
-    public partial class Form1 : Form
+    public partial class SimpleWebCrawler : Form
     {
-        public Form1()
+
+        static TimeSpan totalTime;
+        public SimpleWebCrawler()
         {
             InitializeComponent();
-
-          
-
-
-
 
         }
 
@@ -45,35 +42,41 @@ namespace SimpleWebCrawler
                     stopWatch.Stop();
 
                     TimeSpan ts = stopWatch.Elapsed;
-
                     Display(item, ts);
                 }
 
-
+                Display("Total Run Time ", totalTime);
             }
 
         }
 
         private void Display(string item , TimeSpan ts )
         {
-            // display
-            item += "-------------------";
+            // display function 
+
+             totalTime  +=  ts ; 
+
+            item += "--------------------------------";
             string elapsedTime = String.Format("{0:00}:{1:00}:{2:00}.{3:00}",
                                          ts.Hours, ts.Minutes, ts.Seconds, ts.Milliseconds / 10);
-            text_output.AppendText("\n" + elapsedTime + " - " + item.Substring(0, 40));
+            text_output.AppendText("\n" + elapsedTime + " - " + item.TrimStart().Substring(0, 40));
+
 
         }
 
         private bool Check(string[] arr)
         {
-            // checking input 
+            // checking input for null or not typed feilds 
+
             if (arr != null)
             {
                 foreach (var item in arr)
                 {
+                    item.TrimStart();
+
                     if (item == null || item.Equals(""))
                     {
-                        text_output.AppendText("\n" +"Error - empty string ");
+                        text_output.AppendText("\n" + "Error - All fields must be Full!  ");
 
                         return false;
                     }
@@ -85,11 +88,7 @@ namespace SimpleWebCrawler
 
         private void button_submit_Click(object sender, EventArgs e)
         {
-            // string webSite1 = textBox_WbSite1.Text;
-            // string webSite2 = textBox_WbSite2.Text;
-
-            //string[] webArray = new string[] { webSite1, webSite2 };
-
+        
             string webSite1 = textBox_WbSite1.Text;
             string webSite2 = textBox_WbSite2.Text;
             string webSite3 = textBox_WbSite3.Text;

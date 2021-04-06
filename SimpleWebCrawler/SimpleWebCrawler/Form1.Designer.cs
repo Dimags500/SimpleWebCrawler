@@ -1,7 +1,7 @@
 ﻿
 namespace SimpleWebCrawler
 {
-    partial class Form1
+    partial class SimpleWebCrawler
     {
         /// <summary>
         ///  Required designer variable.
@@ -63,16 +63,18 @@ namespace SimpleWebCrawler
             // 
             // textBox_WbSite1
             // 
+            this.textBox_WbSite1.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.textBox_WbSite1.Location = new System.Drawing.Point(87, 12);
             this.textBox_WbSite1.Name = "textBox_WbSite1";
-            this.textBox_WbSite1.Size = new System.Drawing.Size(228, 27);
+            this.textBox_WbSite1.Size = new System.Drawing.Size(441, 27);
             this.textBox_WbSite1.TabIndex = 2;
             // 
             // textBox_WbSite2
             // 
+            this.textBox_WbSite2.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.textBox_WbSite2.Location = new System.Drawing.Point(87, 61);
             this.textBox_WbSite2.Name = "textBox_WbSite2";
-            this.textBox_WbSite2.Size = new System.Drawing.Size(228, 27);
+            this.textBox_WbSite2.Size = new System.Drawing.Size(441, 27);
             this.textBox_WbSite2.TabIndex = 3;
             // 
             // label_WebSite3
@@ -95,23 +97,26 @@ namespace SimpleWebCrawler
             // 
             // textBox_WbSite3
             // 
+            this.textBox_WbSite3.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.textBox_WbSite3.Location = new System.Drawing.Point(87, 103);
             this.textBox_WbSite3.Name = "textBox_WbSite3";
-            this.textBox_WbSite3.Size = new System.Drawing.Size(228, 27);
+            this.textBox_WbSite3.Size = new System.Drawing.Size(441, 27);
             this.textBox_WbSite3.TabIndex = 2;
             // 
             // textBox_WbSite4
             // 
+            this.textBox_WbSite4.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.textBox_WbSite4.Location = new System.Drawing.Point(87, 152);
             this.textBox_WbSite4.Name = "textBox_WbSite4";
-            this.textBox_WbSite4.Size = new System.Drawing.Size(228, 27);
+            this.textBox_WbSite4.Size = new System.Drawing.Size(441, 27);
             this.textBox_WbSite4.TabIndex = 3;
             // 
             // textBox_WbSite5
             // 
+            this.textBox_WbSite5.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.textBox_WbSite5.Location = new System.Drawing.Point(87, 199);
             this.textBox_WbSite5.Name = "textBox_WbSite5";
-            this.textBox_WbSite5.Size = new System.Drawing.Size(228, 27);
+            this.textBox_WbSite5.Size = new System.Drawing.Size(441, 27);
             this.textBox_WbSite5.TabIndex = 5;
             // 
             // label_WebSite5
@@ -128,9 +133,9 @@ namespace SimpleWebCrawler
             this.button_submit.BackColor = System.Drawing.Color.OrangeRed;
             this.button_submit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_submit.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button_submit.Location = new System.Drawing.Point(352, 40);
+            this.button_submit.Location = new System.Drawing.Point(12, 235);
             this.button_submit.Name = "button_submit";
-            this.button_submit.Size = new System.Drawing.Size(94, 29);
+            this.button_submit.Size = new System.Drawing.Size(516, 29);
             this.button_submit.TabIndex = 6;
             this.button_submit.Text = "Submit";
             this.button_submit.UseVisualStyleBackColor = false;
@@ -138,13 +143,14 @@ namespace SimpleWebCrawler
             // 
             // text_output
             // 
+            this.text_output.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.text_output.Location = new System.Drawing.Point(5, 270);
             this.text_output.Name = "text_output";
             this.text_output.Size = new System.Drawing.Size(523, 225);
             this.text_output.TabIndex = 7;
             this.text_output.Text = "";
             // 
-            // Form1
+            // SimpleWebCrawler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -162,8 +168,11 @@ namespace SimpleWebCrawler
             this.Controls.Add(this.label_WebSite3);
             this.Controls.Add(this.label_WebSite2);
             this.Controls.Add(this.label_WebSite1);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "SimpleWebCrawler";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "SimpleWebCrawler";
             this.ResumeLayout(false);
             this.PerformLayout();
 
