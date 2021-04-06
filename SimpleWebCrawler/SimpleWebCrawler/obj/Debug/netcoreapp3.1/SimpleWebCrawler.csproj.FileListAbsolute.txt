@@ -1,0 +1,15 @@
+C:\Users\Lenovo\source\repos\SimpleWebCrawler\SimpleWebCrawler\bin\Debug\netcoreapp3.1\SimpleWebCrawler.exe
+C:\Users\Lenovo\source\repos\SimpleWebCrawler\SimpleWebCrawler\bin\Debug\netcoreapp3.1\SimpleWebCrawler.deps.json
+C:\Users\Lenovo\source\repos\SimpleWebCrawler\SimpleWebCrawler\bin\Debug\netcoreapp3.1\SimpleWebCrawler.runtimeconfig.json
+C:\Users\Lenovo\source\repos\SimpleWebCrawler\SimpleWebCrawler\bin\Debug\netcoreapp3.1\SimpleWebCrawler.runtimeconfig.dev.json
+C:\Users\Lenovo\source\repos\SimpleWebCrawler\SimpleWebCrawler\bin\Debug\netcoreapp3.1\SimpleWebCrawler.dll
+C:\Users\Lenovo\source\repos\SimpleWebCrawler\SimpleWebCrawler\bin\Debug\netcoreapp3.1\SimpleWebCrawler.pdb
+C:\Users\Lenovo\source\repos\SimpleWebCrawler\SimpleWebCrawler\obj\Debug\netcoreapp3.1\SimpleWebCrawler.csprojAssemblyReference.cache
+C:\Users\Lenovo\source\repos\SimpleWebCrawler\SimpleWebCrawler\obj\Debug\netcoreapp3.1\SimpleWebCrawler.Form1.resources
+C:\Users\Lenovo\source\repos\SimpleWebCrawler\SimpleWebCrawler\obj\Debug\netcoreapp3.1\SimpleWebCrawler.csproj.GenerateResource.cache
+C:\Users\Lenovo\source\repos\SimpleWebCrawler\SimpleWebCrawler\obj\Debug\netcoreapp3.1\SimpleWebCrawler.AssemblyInfoInputs.cache
+C:\Users\Lenovo\source\repos\SimpleWebCrawler\SimpleWebCrawler\obj\Debug\netcoreapp3.1\SimpleWebCrawler.AssemblyInfo.cs
+C:\Users\Lenovo\source\repos\SimpleWebCrawler\SimpleWebCrawler\obj\Debug\netcoreapp3.1\SimpleWebCrawler.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\source\repos\SimpleWebCrawler\SimpleWebCrawler\obj\Debug\netcoreapp3.1\SimpleWebCrawler.dll
+C:\Users\Lenovo\source\repos\SimpleWebCrawler\SimpleWebCrawler\obj\Debug\netcoreapp3.1\SimpleWebCrawler.pdb
+C:\Users\Lenovo\source\repos\SimpleWebCrawler\SimpleWebCrawler\obj\Debug\netcoreapp3.1\SimpleWebCrawler.genruntimeconfig.cache
