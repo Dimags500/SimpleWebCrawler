@@ -9,6 +9,7 @@ namespace SimpleWebCrawler
     {
 
         static TimeSpan totalTime;
+        static bool ShowErrors = false;
         public SimpleWebCrawler()
         {
             InitializeComponent();
@@ -48,10 +49,8 @@ namespace SimpleWebCrawler
                     {
                         ////text_output.AppendText("\nError BUT I WILL CONTINUE" );
                         //MessageBox.Show(ex.Message);
-
-                        text_output.AppendText("\nWebSite"+(i+1) + ex.Message);
-
-
+                        if(ShowErrors)
+                        text_output.AppendText("\nWebSite"+(i+1) + ex.InnerException);
                     }
                 }
 
@@ -90,8 +89,11 @@ namespace SimpleWebCrawler
 
                     if (arr[i] == null || arr[i].Equals(""))
                     {
-                        text_output.AppendText("\nWebSite " + (i + 1) + " is Empty ");
                         arr[i] = "Empty";
+                        if (ShowErrors)
+                            text_output.AppendText("\nWebSite " + (i + 1) + " is Empty ");
+
+
 
                         // return false;
                     }
@@ -124,6 +126,17 @@ namespace SimpleWebCrawler
 
         }
 
+        private void checkBoxErrors_CheckedChanged(object sender, EventArgs e)
+        {
 
+            if (checkBoxErrors.Checked)
+                ShowErrors = true;
+            else
+                ShowErrors = false;
+
+              
+            
+
+        }
     }
 }

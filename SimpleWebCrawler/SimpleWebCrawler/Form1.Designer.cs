@@ -41,6 +41,7 @@ namespace SimpleWebCrawler
             this.label_WebSite5 = new System.Windows.Forms.Label();
             this.button_submit = new System.Windows.Forms.Button();
             this.text_output = new System.Windows.Forms.RichTextBox();
+            this.checkBoxErrors = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // label_WebSite1
@@ -133,9 +134,9 @@ namespace SimpleWebCrawler
             this.button_submit.BackColor = System.Drawing.Color.OrangeRed;
             this.button_submit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_submit.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button_submit.Location = new System.Drawing.Point(12, 235);
+            this.button_submit.Location = new System.Drawing.Point(125, 235);
             this.button_submit.Name = "button_submit";
-            this.button_submit.Size = new System.Drawing.Size(516, 29);
+            this.button_submit.Size = new System.Drawing.Size(403, 29);
             this.button_submit.TabIndex = 6;
             this.button_submit.Text = "Submit";
             this.button_submit.UseVisualStyleBackColor = false;
@@ -150,12 +151,24 @@ namespace SimpleWebCrawler
             this.text_output.TabIndex = 7;
             this.text_output.Text = "";
             // 
+            // checkBoxErrors
+            // 
+            this.checkBoxErrors.AutoSize = true;
+            this.checkBoxErrors.Location = new System.Drawing.Point(5, 235);
+            this.checkBoxErrors.Name = "checkBoxErrors";
+            this.checkBoxErrors.Size = new System.Drawing.Size(113, 24);
+            this.checkBoxErrors.TabIndex = 8;
+            this.checkBoxErrors.Text = "Show Errors ";
+            this.checkBoxErrors.UseVisualStyleBackColor = true;
+            this.checkBoxErrors.CheckedChanged += new System.EventHandler(this.checkBoxErrors_CheckedChanged);
+            // 
             // SimpleWebCrawler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(540, 507);
+            this.Controls.Add(this.checkBoxErrors);
             this.Controls.Add(this.text_output);
             this.Controls.Add(this.button_submit);
             this.Controls.Add(this.textBox_WbSite5);
@@ -192,6 +205,7 @@ namespace SimpleWebCrawler
         private System.Windows.Forms.Label label_WebSite5;
         private System.Windows.Forms.Button button_submit;
         private System.Windows.Forms.RichTextBox text_output;
+        private System.Windows.Forms.CheckBox checkBoxErrors;
     }
 }
 
