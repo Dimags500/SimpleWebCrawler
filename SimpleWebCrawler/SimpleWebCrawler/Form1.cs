@@ -1,14 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Net;
-using System.IO;
 using System.Diagnostics;
 
 namespace SimpleWebCrawler
@@ -33,16 +25,34 @@ namespace SimpleWebCrawler
 
             if (Check(arr) == true)
             {
-                text_output.AppendText("\n" + "We Started ! ");
+                text_output.AppendText("\n" + "We Started Download ! ");
 
-                foreach (var item in arr)
+
+
+                for (int i = 0; i < arr.Length; i++)
                 {
-                    stopWatch.Start();
-                    client.DownloadString(item);
-                    stopWatch.Stop();
 
-                    TimeSpan ts = stopWatch.Elapsed;
-                    Display(item, ts);
+                    try
+                    {
+
+                        if (arr[i].Equals("Empty"))
+                            continue;
+                        stopWatch.Start();
+                        client.DownloadString(arr[i]);
+                        stopWatch.Stop();
+
+                        TimeSpan ts = stopWatch.Elapsed;
+                        Display(arr[i], ts);
+                    }
+                    catch (Exception ex)
+                    {
+                        ////text_output.AppendText("\nError BUT I WILL CONTINUE" );
+                        //MessageBox.Show(ex.Message);
+
+                        text_output.AppendText("\nWebSite"+(i+1) + ex.Message);
+
+
+                    }
                 }
 
                 Display("Total Run Time ", totalTime);
@@ -50,35 +60,40 @@ namespace SimpleWebCrawler
 
         }
 
-        private void Display(string item , TimeSpan ts )
+        private void Display(string WebSite , TimeSpan ts )
         {
-            // display function 
+            // Display function, Displays time and website name, also total time  
 
-             totalTime  +=  ts ; 
+            totalTime +=  ts ;
 
-            item += "--------------------------------";
+            WebSite += "--------------------------------";
             string elapsedTime = String.Format("{0:00}:{1:00}:{2:00}.{3:00}",
                                          ts.Hours, ts.Minutes, ts.Seconds, ts.Milliseconds / 10);
-            text_output.AppendText("\n" + elapsedTime + " - " + item.TrimStart().Substring(0, 40));
+            text_output.AppendText("\n" + elapsedTime + " - " + WebSite.Substring(0, 40));
 
 
         }
 
         private bool Check(string[] arr)
         {
-            // checking input for null or not typed feilds 
+            /* checking input for null or not typed feilds ,adding "Empty" if the field is empty
+             so that download function skip that element of array
+            */
 
             if (arr != null)
             {
-                foreach (var item in arr)
+                for (int i = 0; i < arr.Length; i++)
+
                 {
-                    item.TrimStart();
+                    string temp = arr[i];
+                    arr[i] = temp.TrimStart();
 
-                    if (item == null || item.Equals(""))
+                    if (arr[i] == null || arr[i].Equals(""))
                     {
-                        text_output.AppendText("\n" + "Error - All fields must be Full!  ");
+                        text_output.AppendText("\nWebSite " + (i + 1) + " is Empty ");
+                        arr[i] = "Empty";
 
-                        return false;
+                        // return false;
                     }
                 }
 
@@ -88,18 +103,23 @@ namespace SimpleWebCrawler
 
         private void button_submit_Click(object sender, EventArgs e)
         {
-        
+            // Refresh the richtextbox and reset total time
+            text_output.ResetText();
+            totalTime = new TimeSpan();
+            text_output.AppendText("\n" + "Program is running ! ");
+
+            // adding text from textbox to one array and run it in SyncDownload function
             string webSite1 = textBox_WbSite1.Text;
             string webSite2 = textBox_WbSite2.Text;
             string webSite3 = textBox_WbSite3.Text;
             string webSite4 = textBox_WbSite4.Text;
             string webSite5 = textBox_WbSite5.Text;
-
             string[] webArray = new string[] { webSite1, webSite2, webSite3, webSite4, webSite5 };
 
             SyncDownload(webArray);
 
-            
+
+
 
 
         }
